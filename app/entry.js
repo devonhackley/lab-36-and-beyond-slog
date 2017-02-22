@@ -5,14 +5,19 @@ const angular = require('angular');
 const uiRouter = require('angular-ui-router');
 
 angular.module('blog', [uiRouter])
-.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,urlRouterProvider){
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider){
   $urlRouterProvider.when('', '/');
 
   let routes = [
     {
+      name: 'layout',
+      url: '/layout',
+      template: '<layout></layout>',
+    },
+    {
       name: 'admin',
       url: '/admin',
-      template: '<admin> </admin>',
+      template: '<admin></admin>',
     },
     {
       name: 'dashboard',
