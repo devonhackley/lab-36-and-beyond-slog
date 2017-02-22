@@ -5,7 +5,8 @@
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
-    "test": "node_modules/mocha/bin/mocha ./server/test"
+    "test": "./node_modules/mocha/bin/mocha ./server/test",
+    "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot"
   },
   "repository": {
     "type": "git",
