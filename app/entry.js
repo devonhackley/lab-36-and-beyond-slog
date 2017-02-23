@@ -6,7 +6,7 @@ const uiRouter = require('angular-ui-router');
 
 angular.module('blog', [uiRouter])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider){
-  $urlRouterProvider.when('', '/');
+  $urlRouterProvider.when('', '/admin');
 
   let routes = [
     {
