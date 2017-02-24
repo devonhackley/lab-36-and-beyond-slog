@@ -1,0 +1,111 @@
+@import "theme";
+
+@mixin base {
+  body, body * {
+    width: 100%;
+    box-sizing:border-box;
+    font-size: 3vw;
+    font-family: helvetica;
+    margin-bottom: $pad * 2;
+    background-color: $brand-secondary;
+    color:$brand-white;
+
+    @media screen and (min-width: 730px) {
+      font-size: 2vw;
+    }
+
+    @media screen and (min-width: 1000px) {
+      font-size: 1vw;
+    }
+  }
+
+  body {
+    padding: $pad * 0.8em;
+  }
+
+  button, a {
+    transition: color 500ms, background-color 500ms;
+  }
+
+  a {
+    font-weight: 500;
+    color: $brand-darkblue;
+
+    &:hover {
+      color: $brand-success;
+    }
+  }
+
+  button, input, textarea, form * {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+  color: $brand-black;
+  font-weight: bolder;
+  background-color: $brand-darkblue;
+  cursor: pointer;
+  @include border;
+
+  &:hover {
+    background-color: $brand-neonblue * 0.2;
+  }
+
+  &:active{
+    background-color: $brand-lightblue * 0.6;
+  }
+}
+
+ul {
+  width:100%;
+  padding-left:$pad * 0.2em;
+  cursor: pointer;
+  border: 0.2em solid $brand-white;
+  border-top-left-radius: $scale * 0.2em;
+  border-top-right-radius: $scale * 0.2em;
+  background-color: $brand-white;
+}
+ li{
+   background-color: $brand-white;
+   color:$brand-blue;
+   &:hover {
+     font-size: 1.2em;
+     background-color: $brand-neonblue * 0.2;
+     border-top-right-radius: 0.8em;
+     border-top-left-radius: 0.8em;
+     border-bottom-right-radius: 0.8em;
+     border-bottom-left-radius: 0.8em;
+   }
+
+ }
+
+textarea {
+  width: 100%;
+  height: auto;
+  font-size: 1.3em;
+  padding: $pad * 1.5;
+  background-color: $brand-white;
+  color:$brand-darkblue;
+}
+
+
+@media screen and (min-width: 800px){
+   body {
+     width: 80%;
+     margin-left: auto;
+     margin-right: auto;
+   }
+   @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $i * $scale * 1vw;
+      a {
+        font-size: $i * $scale * 1vw;
+      }
+      margin-bottom: $i / 6 * 0.5em;
+    }
+  }
+ }
+
+}

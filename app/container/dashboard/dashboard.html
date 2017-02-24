@@ -1,0 +1,21 @@
+<div class="dashboard">
+  <page-select
+      pages="$ctrl.pageSelectPages"
+      show-all="$ctrl.pageSelectShowAll"
+      selected="$ctrl.pageSelectSelected"
+      handle-select="$ctrl.pageSelectHandleSelect">
+  </page-select>
+
+  <button ng-click="$ctrl.handlePageNew()"> New Page
+  </button>
+  <button
+  ng-click="$ctrl.handlePageDelete($ctrl.pageSelectSelected)"> Delete page
+</button>
+
+<div class="bubble" marked="$ctrl.pageEditorPage.content"></div>
+
+<page-editor
+  page="$ctrl.pageEditorPage"
+  handle-submit="$ctrl.pageEditorHandleSubmit">
+</page-editor>
+</div>

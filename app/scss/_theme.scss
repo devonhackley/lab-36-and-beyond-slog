@@ -1,0 +1,36 @@
+$brand-primary: #44DDAA;
+$brand-secondary: #3C4C5B;
+$brand-darkblue: #21669A;
+$brand-blue: #0087DA;
+$brand-lightblue:#26D3FF;
+$brand-neonblue: #00FFFF;
+$brand-black:#000;
+$brand-white:#fff;
+$brand-success: #FFFF00;
+$brand-error: #f8a;
+
+$pad: 2;
+$scale: 3;
+
+@mixin border {
+  border: 0.2em solid $brand-white;
+  border-top-left-radius: $scale * 0.2em;
+  border-top-right-radius: $scale * 0.2em;
+  border-bottom-left-radius: $scale * 0.2em;
+  border-bottom-right-radius: $scale * 0.2em;
+}
+ .bubble {
+  padding: $pad * 1.5;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}

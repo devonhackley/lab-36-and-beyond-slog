@@ -1,10 +1,10 @@
 'use strict';
-
+require('./scss/main.scss');
 const angular = require('angular');
 
 const uiRouter = require('angular-ui-router');
-
-angular.module('blog', [uiRouter])
+const ngMarked = require('angular-marked');
+angular.module('blog', [uiRouter, ngMarked])
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,$urlRouterProvider){
   $urlRouterProvider.when('', '/admin');
 
@@ -22,7 +22,7 @@ angular.module('blog', [uiRouter])
     {
       name: 'dashboard',
       url: '/dashboard',
-      template:'<h2>yo</h2>',
+      template:'<dashboard></dashboard>',
     }
   ];
 
@@ -30,5 +30,9 @@ angular.module('blog', [uiRouter])
 }]);
 
 require('./service/admin-service.js');
+require('./service/page-service.js');
 require('./container/admin');
+require('./container/dashboard');
 require('./component/login');
+require('./component/page-editor');
+require('./component/page-select');
