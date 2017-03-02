@@ -22,6 +22,7 @@ function authService($log, $q, $window, $http){
 
   authService.tokenFetch = () => {
     if(authToken)
+      console.log('authToken', authToken);
       return $q.resolve(authToken);
 
     try {
