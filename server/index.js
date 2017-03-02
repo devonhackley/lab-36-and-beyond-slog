@@ -27,7 +27,7 @@ app.use(require('./router/auth-router.js'));
 app.use(require('./router/page-router.js'));
 
 app.use(express.static(`${__dirname}/../build`));
-app.get('*', (req,res) => res.redirect('/home'));
+app.get('*', (req,res) => res.redirect('/'));
 
 app.use((err,req,res,next) => {
   console.error(err.message);
