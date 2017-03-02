@@ -30,7 +30,7 @@ if(production){
       compress: {
         warnings: false,
       }
-    });
+    }),
   ]),
   output.publicPath = '';
 };
