@@ -4,6 +4,7 @@ require('angular').module('blog')
 .filter('pageSearchFilter', function(){
   return function(pages, searchTerm) {
     let fRegex = generateFuzzyRegex(searchTerm);
+    console.log('pages', pages);
     return pages.filter(page => {
       return fRegex.test(page.title.toLowerCase())
     });
