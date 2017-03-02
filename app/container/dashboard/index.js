@@ -19,7 +19,18 @@ require('angular').module('blog')
       this.pageEditorHandleSubmit = (page) => {
         pageService.create(page)
         .then(page => {
-          this.pageSelectPages.push(page);
+          // this.pageSelectPages.push(page);
+          let found = false;
+          this.pageSelectPages.map(item => {
+            if(page.id == item.id) {
+              found = true;
+              return page;
+            }
+            return item;
+          });
+          if(!found){
+            this.pageSelectPages.push(page);
+          };
           this.pageEditorPage = {title: '', content:'', showInNav:false};
         })
         .catch($log.error);

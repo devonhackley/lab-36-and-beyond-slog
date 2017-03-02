@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "401 JS --  Lab 32 crud ===",
   "main": "main.js",
+  "engines": {
+    "node": "7.2.0"
+  },
   "scripts": {
     "start": "node main.js",
+    "heroku-postbuild": "./node_modules/webpack/bin/webpack.js",
     "test": "./node_modules/mocha/bin/mocha ./server/test",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot"
   },
@@ -21,6 +25,8 @@
   "homepage": "https://github.com/devonhackley/lab-36-and-beyond-slog#readme",
   "dependencies": {
     "angular": "^1.6.2",
+    "angular-animate": "^1.6.2",
+    "angular-clipboard": "^1.5.0",
     "angular-marked": "^1.2.2",
     "angular-ui-router": "^0.4.2",
     "babel-core": "^6.23.1",
@@ -48,6 +54,7 @@
     "url-loader": "^0.5.7",
     "uuid": "^3.0.1",
     "webpack": "^2.2.1",
+    "webpack-clean-plugin": "^0.2.3",
     "webpack-dev-server": "^2.4.1"
   }
 }

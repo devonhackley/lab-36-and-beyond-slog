@@ -1,0 +1,17 @@
+<div class="home">
+  <h2>Home</h2>
+
+  <navbar
+    pages="$ctrl.pages"
+    handle-select="$ctrl.navbarHandleSelect">
+  </navbar>
+
+  <page-search
+    pages="$ctrl.pages"
+    handle-select="$ctrl.navbarHandleSelect"
+    search-term="$ctrl.searchTerm">
+  </page-search>
+
+  <div marked="$ctrl.selected.content">
+  </div>
+</div>
